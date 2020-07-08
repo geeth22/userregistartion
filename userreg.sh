@@ -1,11 +1,11 @@
-#usecase 5
+#usecase 6
 
 #!/bin/bash -x
 
 echo "Enter password"
 read password
 
-passpat="^[A-Za-z]{8}$"
+passpat="^[A-Za-z0-9]{7}[A-Z]{1,}[A-Za-z0-9]$"
 if [[ $password =~ $passpat ]]
 then
         echo "Valid"
