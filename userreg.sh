@@ -1,12 +1,12 @@
-#usecase 4 
+#usecase 5
 
 #!/bin/bash -x
 
-echo "Enter your Mobile no:"
-read mobno
+echo "Enter password"
+read password
 
-mobpat="^[\+0-9]{3}[ ]?[0-9]{10}$"
-if [[ $mobno =~ $mobpat ]]
+passpat="^[A-Za-z]{8}$"
+if [[ $password =~ $passpat ]]
 then
         echo "Valid"
 else
