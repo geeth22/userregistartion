@@ -5,7 +5,7 @@
 echo "Enter password"
 read password
 
-passpat="^[A-Za-z]{8}$"
+passpat="^[0-9A-Za-z]{8,}"
 if [[ $password =~ $passpat ]]
 then
         echo "Valid"
