@@ -1,12 +1,12 @@
-#usecase 3 
+#usecase 4 
 
 #!/bin/bash -x
 
-echo "Enter your email ID:"
-read id
+echo "Enter your Mobile no:"
+read mobno
 
-emailpat="^[0-9a-zA-Z]+([_.+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$"
-if [[ $id =~ $emailpat ]]
+mobpat="^[\+0-9]{3}[ ]?[0-9]{10}$"
+if [[ $mobno =~ $mobpat ]]
 then
         echo "Valid"
 else
