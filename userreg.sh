@@ -7,7 +7,7 @@
 echo "Enter your firstname:"
 read firstname
 
-firstpat="^[A-Z]{1}[A-Za-z]{2,}"
+firstpat="^[A-Z]{1}[A-Za-z]{2,}"  #First name starts with Cap and has minimum 3 characters
 if [[ $firstname =~ $firstpat ]]
 then
         echo "Valid"
@@ -22,7 +22,7 @@ fi
 echo "Enter your lastname:"
 read lastname
 
-lastpat="^[A-Z]{1}[A-Za-z]{2,}"
+lastpat="^[A-Z]{1}[A-Za-z]{2,}"  #last name starts with cap and has minimum 3 characters
 if [[ $lastname =~ $lastpat ]]
 then
         echo "Valid"
@@ -37,7 +37,8 @@ fi
 echo "Enter your email ID:"
 read id
 
-emailpat="^[0-9a-zA-Z]+([_.+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$"
+emailpat="^[0-9a-zA-Z]+([_.+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$"  
+precise @ and . positions
 if [[ $id =~ $emailpat ]]
 then
         echo "Valid"
@@ -52,7 +53,7 @@ fi
 echo "Enter your Mobile no:"
 read mobno
 
-mobpat="^[\+0-9]{3}[ ]?[0-9]{10}$"
+mobpat="^[\+0-9]{2}[ ]?[0-9]{10}$" # country code followed by space and 10 digit number
 if [[ $mobno =~ $mobpat ]]
 then
         echo "Valid"
